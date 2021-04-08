@@ -1,0 +1,26 @@
+{%extends "layout.html" %}
+{%block content %}
+	<h1>Mission</h1>
+	<article class="media content-section">
+		 <div class="media-body" >
+		    <div class="article-metadata">
+		      <a class="mr-2"><p>
+My Mission is to create a unique community of 21,000 Digidanta coaches, and
+Transcend, Empower, Enlighten them to influence, kindle, Transform the life of 10%
+of the world population, irrespective of caste, creed, color, race, religion, social,
+political, educational, and professional status.  The Mission for April 2021- Dec 2024
+
+</p></a>
+		    </div>
+		 </div>
+	</article>
+
+<script>
+	let homeLink = document.getElementById("homeLink");
+	homeLink.classList.remove("active");
+
+	let activeLink = document.getElementById("aboutLink");
+	activeLink.classList.add("active");
+</script>
+{% endblock content%}
+

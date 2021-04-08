@@ -1,0 +1,40 @@
+{%extends "layout.html" %}
+{%block content %}
+	<div class= "content-section">
+		<form method ="POST" action="">
+			{{ form.hidden_tag()}}
+        
+			<fieldset class="form-group">
+				<legend class ="border-bottom mb-4">Get in touch</legend>
+				<div class ="form-group">
+					{{form.name.label(class="form-control-label")}}
+					{{form.name(class="form-control form-label-lg")}}
+				</div>
+				<div class ="form-group">
+					{{form.email.label(class="form-control-label")}}
+					{{form.email(class="form-control form-label-lg")}}
+				</div>
+				<div class ="form-group">
+					{{form.subject.label(class="form-control-label")}}
+					{{form.subject(class="form-control form-label-lg")}}
+				</div>
+				<div class ="form-group">
+					{{form.message.label(class="form-control-label")}}
+					{{form.message(class="form-control form-label-lg")}}
+				</div>
+			</fieldset>
+			<div class ="form-group" style="border-color: #aa9166;">
+					{{form.submit(class="btn btn-outline-info submit-button")}}
+			</div>
+		</form>
+	    
+	</div>
+
+    <script>
+        let homeLink = document.getElementById("homeLink");
+        homeLink.classList.remove("active");
+    
+        let activeLink = document.getElementById("contactLink");
+        activeLink.classList.add("active");
+    </script>
+{% endblock content%}

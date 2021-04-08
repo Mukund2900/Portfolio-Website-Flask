@@ -1,0 +1,35 @@
+{%extends "layout.html" %}
+{%block content %}
+	{%for post in posts%}
+		<article class="media content-section">
+		  <div class="media-body" >
+		    <div class="article-metadata">
+				<div>
+				
+		      <small class="text-muted">{{ post.date_posted.strftime('%d-%m-%Y') }}</small>
+		    </div>
+		    <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+		    <p class="article-content">{{ post.content }}  </p>
+		  </div>
+		  	{% if post.image != None  %}
+		  		<img src="data:image/jpg;base64,{{post.image}}" alt="Image" class="img-fluid">
+		    {% else %}             
+			{% endif %}
+		  </div>
+		  {% if current_user.is_authenticated %}
+                <div>
+                  
+                  <form action="{{ url_for('delete_post', post_id=post.id) }}" method="POST">
+                      <input class="btn btn-danger" type="submit" value="Delete">
+                  </form>
+                </div>
+                
+	           {% else %}             
+	           {% endif %}	
+		</article>
+            	
+	{% endfor %}
+	
+{% endblock content%}
+
+

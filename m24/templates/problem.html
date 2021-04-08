@@ -1,0 +1,28 @@
+{%extends "layout.html" %}
+{%block content %}
+	<h1>The Problem he is Solving</h1>
+	<article class="media content-section">
+		 <div class="media-body" >
+		    <div class="article-metadata">
+		      <a class="mr-2"><p>
+People are uncertain, stressed, hypertensive, lustful, directionless, angry, greedy,
+egoistic, hateful: these problems have given rise to large-scale frustration of youth
+and working class. Students face difficulties in their studies. There are atrocities on
+women and old aged. An inclusive and holistic approach is needed to transform
+human beings from animal instincts to noble instincts so that this world is worth
+living.
+
+</p></a>
+		    </div>
+		 </div>
+	</article>
+
+<script>
+	let homeLink = document.getElementById("homeLink");
+	homeLink.classList.remove("active");
+
+	let activeLink = document.getElementById("aboutLink");
+	activeLink.classList.add("active");
+</script>
+{% endblock content%}
+

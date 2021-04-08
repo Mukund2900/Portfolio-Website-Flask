@@ -1,0 +1,24 @@
+{%extends "layout.html" %}
+{%block content %}
+	<h1>Vision</h1>
+	<article class="media content-section">
+		 <div class="media-body" >
+		    <div class="article-metadata">
+		      <a class="mr-2"><p>
+Every Home in the world occupied by Progressive, Ethical, Robust, Happy, Nature
+caring and Peace-loving people
+
+</p></a>
+		    </div>
+		 </div>
+	</article>
+
+<script>
+	let homeLink = document.getElementById("homeLink");
+	homeLink.classList.remove("active");
+
+	let activeLink = document.getElementById("aboutLink");
+	activeLink.classList.add("active");
+</script>
+{% endblock content%}
+

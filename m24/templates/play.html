@@ -1,0 +1,15 @@
+{%extends "layout.html" %}
+{%block content %}
+	{%for anonymous in anonymous%}
+		<article class="media content-section">
+		  <div class="media-body" >
+		    <div class="article-metadata">
+		      <a class="mr-2" href="#">Anonymous</a>
+		      <small class="text-muted">{{ anonymous.date_posted.strftime('%d-%m-%Y') }}</small>
+		    </div>
+		    <h2><a class="article-title" href="#">{{ anonymous.title }}</a></h2>
+		    <p class="article-content">{{ anonymous.content }}</p>
+		  </div>
+		</article>
+	{% endfor %}
+{% endblock content%}
